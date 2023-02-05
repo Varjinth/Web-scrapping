@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class=" col-md-12 ">
+        <h3>Viewed URLs Lists</h3>
+        {% for product in products %}        
+        <p><a href=" {{product.url}} " >{{ product.url }}</a></p>
+        <div>
+          <a class="btn btn-secondary btn-sm mt-2" href="{% url 'display' product.pk %}">Scrap details</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endblock content %}
+  
+  
+  
+  

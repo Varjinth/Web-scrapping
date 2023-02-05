@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <div><h1>We couldn't scrap data from the URL you have entered.</h1>
+    </div> 
+        <div class="border_top pt-3">
+            <h4>
+                 If you any other URL to scrap. Please<a href="{% url 'home' %}" class="ml-2">click here</a> 
+            </h4>
+        </div>
+{% endblock content %}

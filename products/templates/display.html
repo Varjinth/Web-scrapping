@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="col-sm-8">
+    <div class="content" >
+      <h3>Product details</h3>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-light pl-3"><img src="{{ product.image }}" alt='products image'></li>
+          <li class="list-group-item list-group-item-light pl-3">Product brand is {{ product.title }}</li>
+          <li class="list-group-item list-group-item-light pl-3">Product size is {{ product.size }}</li>
+          <li class="list-group-item list-group-item-light">Descripion of the product is {{ product.description }}</li>
+          <li class="list-group-item list-group-item-light">Product price is Rs.{{ product.price }}</li>
+          <li class="list-group-item list-group-item-light">Scrapped at {{product.scraped_at}}</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+  <p class='text-muted'>URL of flipkart page for this product is {{ product.url }}</p>
+  <div class="alert alert-warning">
+    <strong>Warning!</strong> Some urls might not work due to pages updated in recently
+  </div>
+
+
+{% endblock %}
